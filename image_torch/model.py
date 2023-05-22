@@ -31,11 +31,11 @@ class CNN(nn.Module):
     
 if __name__ == "__main__":
     model = CNN()
-    random_img = torch.randn(1, 3, 224, 224)
+    random_img = torch.randn(5, 3, 224, 224)
     
     model.eval()
     
     with torch.no_grad():
         logits = model(random_img)
         
-    print(logits)
+    print(logits.argmax(dim=1).shape)
