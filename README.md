@@ -6,7 +6,7 @@
 # ToDO
 - [x] basics of pytorch
 - [x] CNN Image with pytorch
-- [ ] Transfer learning with pytorch
+- [x] Transfer learning with pytorch
 
 # Dataset
 Download from kaggle the following dataset:
