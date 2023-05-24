@@ -70,6 +70,7 @@ if __name__ == "__main__":
             imgs = batch['img'].to(device)
             lbls = batch['label'].to(device)
             
+            model.zero_grad()
             logits = model(imgs)
             
             loss = criterion(logits, lbls)
@@ -104,7 +105,7 @@ if __name__ == "__main__":
         val_acc.reset()
         
     # Save weights
-    if args.is_transfer:
+    if not args.is_transfer:
         model_name = '/bagle_classifier.pt'
     else:
         model_name = '/bagle_classifier_mobile_net.pt'
